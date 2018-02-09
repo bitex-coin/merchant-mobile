@@ -42,7 +42,7 @@ public class WebSocket implements OnTextMessage, OnBinaryMessage, OnFrame {
             this.factory = new WebSocketClientFactory();
             this.factory.start();
             this.client = this.factory.newWebSocketClient();
-            this.client.setMaxTextMessageSize(32768);
+            this.client.setMaxTextMessageSize(100000);
             this.client.setMaxBinaryMessageSize(-1);
         } catch (Exception e) {
             Log.e("WebSocket", "WebSocket -> error: ", e);
